@@ -92,7 +92,7 @@ https://github.com/rtfenter/loyalty-series
 
 ## Status
 
-MVP planned.  
+MVP implemented and activated.  
 The dashboard will focus only on minimal mechanics required to demonstrate drift behavior in loyalty systems.
 
 ---
