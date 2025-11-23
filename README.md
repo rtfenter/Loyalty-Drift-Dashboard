@@ -36,8 +36,8 @@ The first version will include:
 ---
 
 ## Demo Screenshot
+<img width="2620" height="2194" alt="Screenshot 2025-11-23 at 07-42-23 ML Drift Dashboard — Points   Promotions" src="https://github.com/user-attachments/assets/928ed1a2-7e12-4f4d-b667-106134fea199" />
 
-<img width="2910" height="1906" alt="Screenshot 2025-11-22 at 18-17-38 ML Drift Dashboard — Points   Promotions" src="https://github.com/user-attachments/assets/8d4884bc-328e-45d5-9a0c-1d49abd6d41f" />
 
 ---
 
