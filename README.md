@@ -1,3 +1,4 @@
+# Loyalty Drift Prototype
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-000?style=for-the-badge)](https://rtfenter.github.io/Loyalty-ML-Drift-Dashboard/)
 
 ---
@@ -13,6 +14,11 @@ Even minor changes — partner IDs, tiers, categories, spend fields — can caus
 - unstable scores and segment assignments  
 
 This dashboard exposes those shifts visually, making drift legible before it hits production.
+
+---
+## 🖼️ Demo Screenshot
+Here’s a quick look at the Loyalty Drift Dashboard in action:<img width="2910" height="2120" alt="Screenshot 2025-11-22 at 18-10-56 ML Drift Dashboard — Points   Promotions" src="https://github.com/user-attachments/assets/6e2d3dbf-c9e6-4e96-91a5-f75c7899951d" />
+
 
 ---
 
