@@ -9,14 +9,30 @@
 
 <body>
     <h1>ML Drift Dashboard — Points & Promotions</h1>
-    <p class="subtitle">A tiny dashboard showing how inconsistent loyalty events create drift in targeting, promotions, partner classification, and scores.</p>
+    <p class="subtitle">
+        A tiny dashboard showing how inconsistent loyalty events create drift in targeting, promotions, partner classification, and scores.
+    </p>
 
-    <!-- Event Inputs -->
+    <!-- Scenario Selector -->
     <section class="input-section">
-        <h2>Compare Two Loyalty Events</h2>
-        
-        <textarea id="event1" placeholder="Paste Event v1 JSON here..."></textarea>
-        <textarea id="event2" placeholder="Paste Event v2 JSON here..."></textarea>
+        <h2>Select a Drift Scenario</h2>
+
+        <label for="scenarioSelect">Scenario:</label>
+        <select id="scenarioSelect">
+            <option value="">Choose an example...</option>
+            <option value="scenario1">Example 1 – Partner + Promo Drift</option>
+            <option value="scenario2">Example 2 – Tier + Category Drift</option>
+        </select>
+
+        <p class="hint">
+            Select a scenario to load Event v1 and Event v2, then click "Check for Drift".
+        </p>
+
+        <h2>Event v1</h2>
+        <textarea id="event1" readonly></textarea>
+
+        <h2>Event v2</h2>
+        <textarea id="event2" readonly></textarea>
 
         <button id="checkDriftBtn">Check for Drift</button>
     </section>
@@ -24,7 +40,9 @@
     <!-- Results -->
     <section class="results">
         <h2>Drift Summary</h2>
-        <div id="output" class="output-box">No drift calculated yet.</div>
+        <div id="output" class="output-box">
+            Select a scenario above and click "Check for Drift" to see the drift summary.
+        </div>
     </section>
 
     <script src="app.js"></script>
