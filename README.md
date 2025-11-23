@@ -1,10 +1,15 @@
-# Loyalty Drift Dasboard Prototype
+# Loyalty Drift Dashboard  
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-000?style=for-the-badge)](https://rtfenter.github.io/Loyalty-Drift-Dashboard/)
 
+### A small prototype that visualizes schema and value drift across loyalty event streams.
+
+This project is part of my **Loyalty Systems Series**, exploring how loyalty systems behave beneath the UI layer — from event flow to FX reconciliation to partner tiering.
+
+The goal of this dashboard is to make drift legible: how tiny upstream changes in event fields create large downstream failures in targeting, attribution, scoring, and redemption.
 
 ---
 
-## 🎯 Purpose
+## Purpose
 
 Loyalty engines are highly sensitive to upstream event quality.  
 Even minor changes — partner IDs, tiers, categories, spend fields — can cause:
@@ -12,53 +17,87 @@ Even minor changes — partner IDs, tiers, categories, spend fields — can caus
 - incorrect promotion targeting  
 - invalid partner attributions  
 - mismatched redemption offers  
-- unstable scores and segment assignments  
+- unstable scores or segment assignments  
 
-This dashboard exposes those shifts visually, making drift legible before it hits production.
+This dashboard provides a visual way to detect and understand those shifts before they hit production.
 
 ---
-## 🖼️ Demo Screenshot
+
+## Features (MVP)
+
+The first version will include:
+
+- Side-by-side comparison of two event sets  
+- Highlighted drift in key fields (partner, tier, category, spend)  
+- Visualization of affected downstream components  
+- Simple event flow: `Compare → Detect Drift → Surface Impact`  
+- Lightweight client-side experience — no backend required  
+
+---
+
+## Demo Screenshot
+
 <img width="2910" height="1906" alt="Screenshot 2025-11-22 at 18-17-38 ML Drift Dashboard — Points   Promotions" src="https://github.com/user-attachments/assets/8d4884bc-328e-45d5-9a0c-1d49abd6d41f" />
 
+---
 
+## Drift Flow Diagram
+
+```
+[Event Stream A]     [Event Stream B]
+         |                 |
+         v                 v
+     Field Comparison Layer
+     (schema + value checks)
+                |
+                v
+       Drift Detection Engine
+      (highlight mismatches)
+                |
+                v
+   Downstream Impact Projection
+ (targeting, attribution, scoring)
+```
 
 ---
 
-## 🧠 How This Maps to Real Loyalty Systems
+## How This Maps to Real Loyalty Systems
 
-Each step corresponds to real downstream engines:
+Even though it's minimal, each step corresponds to real downstream engines:
 
-### Event Comparison  
+### Event Comparison
 Loyalty systems rely on stable, consistent events. Schema drift or inconsistent values break attribution, rules, and targeting.
 
-### Targeting Engine  
-Promotions and campaigns often depend on partner, tier, spend, and category fields. Drift directly impacts eligibility.
+### Targeting Engine
+Promotions and campaigns depend on partner, tier, category, and spend fields. Any drift affects eligibility and segmentation.
 
-### Partner Classification  
-If the partner field changes (e.g., from “PartnerA” → “Partner A”), promotions may fail silently.
+### Partner Classification
+If the partner field changes (e.g., “PartnerA” → “Partner A”), promotions may fail silently or classify incorrectly.
 
-### Score / Segment Stability  
-When key fields differ, the scoring engine may produce wildly different results for the same customer.
+### Score / Segment Stability
+Drift in key inputs leads to unstable scoring, incorrect tier assignment, and mismatched customer experiences.
 
-This tool is a small, legible version of those real-world behaviors.
+This tool is a small, legible model of those real-world behaviors.
 
 ---
 
-## 🔗 Part of the Loyalty Systems Series
+## Part of the Loyalty Systems Series
 
 Main repo:  
 https://github.com/rtfenter/loyalty-series
 
 ---
 
-## 🚧 Status  
+## Status
+
 MVP planned.  
-This dashboard will focus only on the minimal mechanics required to demonstrate drift behavior in loyalty systems.
+The dashboard will focus only on minimal mechanics required to demonstrate drift behavior in loyalty systems.
 
 ---
 
-## ▶️ Local Use  
-When ready, everything will run client-side.
+## Local Use
+
+Everything runs client-side.
 
 To run locally:
 
