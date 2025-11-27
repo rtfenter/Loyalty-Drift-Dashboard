@@ -40,7 +40,7 @@ The first version will include:
 
 ---
 
-## Drift Flow Diagram
+## Loyalty Drift Flow Diagram
 
 ```
 [Event Stream A]     [Event Stream B]
